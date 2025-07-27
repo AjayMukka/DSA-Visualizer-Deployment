@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSA Visualizer</title>
+  <style>
+    :root {
+      --bg-color-light: #f0f0f0;
+      --text-color-light: #1f1f1f;
+      --glass-bg-light: rgba(255, 255, 255, 0.25);
+
+      --bg-color-dark: #121212;
+      --text-color-dark: #ffffff;
+      --glass-bg-dark: rgba(0, 0, 0, 0.3);
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color-light);
+      color: var(--text-color-light);
+      transition: all 0.3s ease;
+    }
+
+    body.dark {
+      background: var(--bg-color-dark);
+      color: var(--text-color-dark);
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.1);
+      color: inherit;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    main {
+      padding: 30px 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .glass-section {
+      background: var(--glass-bg-light);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+      transition: background 0.3s;
+    }
+
+    body.dark .glass-section {
+      background: var(--glass-bg-dark);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    button {
+      padding: 10px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #007BFF;
+      color: white;
+      margin-top: 15px;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 1rem;
+      background-color: rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(10px);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #222;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="theme-toggle" onclick="toggleTheme()">🌗 Toggle Theme</div>
+
+  <header>DSA Visualizer</header>
+
+  <main>
+    <section class="glass-section">
+      <h2>📘 What is DSA?</h2>
+      <p>DSA stands for <strong>Data Structures and Algorithms</strong>. It forms the backbone of computer science and is used to build efficient, scalable applications. Understanding DSA helps in solving complex problems and writing optimized code.</p>
+    </section>
+
+    <section class="glass-section">
+      <h2>🔥 Why Learn DSA?</h2>
+      <ul>
+        <li>Essential for cracking top company interviews (FAANG, Product-based)</li>
+        <li>Improves time & space efficiency of your code</li>
+        <li>Helps in competitive programming & coding contests</li>
+        <li>Develops logical & analytical thinking</li>
+      </ul>
+    </section>
+
+    <section class="glass-section">
+      <h2>🧠 How This Visualizer Works</h2>
+      <ul>
+        <li>Built using Java Swing with an intuitive GUI</li>
+        <li>Select any data structure or algorithm to visualize</li>
+        <li>Step-by-step animated visuals show how it works internally</li>
+        <li>Supports user input and auto-generated examples</li>
+      </ul>
+    </section>
+
+    <section class="glass-section">
+      <h2>📌 Topics Covered</h2>
+      <ul>
+        <li>Linear Data Structures: Arrays, Linked Lists, Stacks, Queues</li>
+        <li>Non-Linear Data Structures: Trees, Graphs, Heaps</li>
+        <li>Sorting Algorithms: Bubble, Selection, Insertion, Merge, Quick</li>
+        <li>Searching: Linear Search, Binary Search</li>
+        <li>Path Finding & Recursion Examples</li>
+      </ul>
+    </section>
+
+    <section class="glass-section">
+      <h2>👤 Who Should Use This?</h2>
+      <ul>
+        <li>Engineering & MCA Students learning DSA</li>
+        <li>College professors looking to teach with visual aids</li>
+        <li>Self-learners and job-seekers preparing for tech interviews</li>
+        <li>Anyone who wants to strengthen their DSA concepts</li>
+      </ul>
+    </section>
+
+    <section class="glass-section">
+      <h2>⚙️ Technologies Used</h2>
+      <ul>
+        <li><strong>Java Swing:</strong> for building GUI</li>
+        <li><strong>OOP:</strong> to structure each data structure and algorithm as a class</li>
+        <li><strong>HTML/CSS:</strong> for this landing page</li>
+        <li><strong>JAR Export:</strong> to create a shareable desktop application</li>
+      </ul>
+    </section>
+
+    <section class="glass-section download-btn">
+      <h2>🎬 Watch Demo Video</h2>
+      <p>See the DSA Visualizer in action before you download.</p>
+      <a href="https://youtu.be/LpGrJw7Jdhk?si=CuPtV-Y0rdcbIlpO" target="_blank">
+        <button style="background-color: #c4302b;">▶️ Watch on YouTube</button>
+      </a>
+    </section>
+
+    <section class="glass-section download-btn">
+      <h2>📦 Download JAR File</h2>
+      <a href="https://drive.google.com/file/d/12QbUV-pNcoq_l7lFyTsEAqEeHmcj5QiF/view?usp=sharing" download>
+        <button>⬇️ Download DSA Visualizer (.JAR)</button>
+      </a>
+    </section>
+
+    <section class="glass-section download-btn">
+      <h2>💻 View Source Code</h2>
+      <a href="https://github.com/AjayMukka/DSA-Visualizer" target="_blank">
+        <button style="background-color: #333;">🌐 View on GitHub</button>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    Made with ❤️ by Ajay • Powered by Java Swing • For Learners Everywhere
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>
